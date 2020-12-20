@@ -3,8 +3,9 @@ import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
+import Date from "../components/date";
 
-export const getStaticProps = async () => {
+export const getStaticProps = () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {
@@ -25,12 +26,6 @@ export default function Home({ allPostsData }) {
           enthusiast. Best place to strike up a convo is on{" "}
           <a href="https:/twitter.com/arjithn">Twitter</a>.
         </p>
-        <h1>
-          Read{" "}
-          <Link href="/posts/first-post">
-            <a>this page!</a>
-          </Link>
-        </h1>
       </section>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -38,11 +33,13 @@ export default function Home({ allPostsData }) {
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, data: { date, title } }) => (
             <li className={utilStyles.listItem} key={id}>
-              {title}
+              <Link href={`posts/${id}`}>
+                <a>{title}</a>
+              </Link>
               <br />
-              {id}
-              <br />
-              {date}
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
             </li>
           ))}
         </ul>
