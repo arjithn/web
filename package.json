@@ -18,6 +18,12 @@
     "react-dom": "16.13.1",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
+    "styled-components": "^5.2.1",
+    "styled-wind": "^0.0.0-beta.13",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.12.0",
+    "babel-plugin-styled-wind": "^0.0.4"
   }
 }

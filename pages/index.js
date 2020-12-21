@@ -4,6 +4,7 @@ import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Date from "../components/date";
+import styled from "styled-wind";
 
 export const getStaticProps = () => {
   const allPostsData = getSortedPostsData();
@@ -34,7 +35,7 @@ export default function Home({ allPostsData }) {
           {allPostsData.map(({ id, data: { date, title } }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`posts/${id}`}>
-                <a>{title}</a>
+                <StyledLink>{title}</StyledLink>
               </Link>
               <br />
               <small className={utilStyles.lightText}>
@@ -47,3 +48,7 @@ export default function Home({ allPostsData }) {
     </Layout>
   );
 }
+
+const StyledLink = styled.a`
+  color: blueviolet;
+`;
