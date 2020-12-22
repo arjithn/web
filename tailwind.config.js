@@ -1,4 +1,5 @@
 const colors = require('./design/colors')
+const { fontFamily } = require('./design/typography')
 
 module.exports = {
     purge: [
@@ -14,9 +15,9 @@ module.exports = {
             xl: '1280px',
             '2xl': '1536px',
         },
-        extend: {
-            colors: { primary: colors.storm, secondary: colors.orange },
-        },
+        colors: { ...colors, primary: colors.storm, secondary: colors.orange },
+        fontFamily,
+        extend: {},
     },
     variants: {
         extend: {},

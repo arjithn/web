@@ -30,7 +30,7 @@ export default function Layout({ children, home }) {
                             className="w-32 h-32 rounded-full"
                             alt={name}
                         />
-                        <h1 className="text-4xl leading-tight my-4 font-extrabold tracking-tight text-primary-500">
+                        <h1 className="text-4xl leading-tight my-4 font-semibold tracking-tight text-primary-500 font-display">
                             {name}
                         </h1>
                     </>
@@ -45,9 +45,9 @@ export default function Layout({ children, home }) {
                                 />
                             </a>
                         </Link>
-                        <h2 className="text-2xl leading-snug my-4 text-gray-400 font-medium">
+                        <h2 className="text-2xl leading-snug my-4 font-display font-medium">
                             <Link href="/">
-                                <a className="text-current">{name}</a>
+                                <a className="text-gray-400">{name}</a>
                             </Link>
                         </h2>
                     </>
