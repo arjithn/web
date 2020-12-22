@@ -27,7 +27,7 @@ export default function Home({ allPostsData }) {
                     Hey There! This is <b className="text-purple-600">Arjith</b>
                     . I&#39;m a frontend engineer and tech enthusiast. Best
                     place to strike up a convo is on{' '}
-                    <a href="https:/twitter.com/arjithn">Twitter</a>.
+                    <Link href="https:/twitter.com/arjithn"><a>Twitter</a></Link>.
                 </p>
             </section>
 
