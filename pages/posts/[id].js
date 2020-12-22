@@ -17,7 +17,7 @@ export default function Post({ postData }) {
                     <Date dateString={postData.date} />
                 </div>
                 <div
-                    className="flex flex-col justify-start items-start space-y-8 list-outside list-decimal text-gray-900 font-content"
+                    className="flex flex-col justify-start items-start space-y-6 list-outside list-decimal text-gray-900 font-content"
                     dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
                 />
             </article>
