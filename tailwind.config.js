@@ -1,3 +1,5 @@
+const colors = require('./design/colors')
+
 module.exports = {
     purge: [
         './pages/**/*.{js,jsx,ts,tsx}',
@@ -5,7 +7,16 @@ module.exports = {
     ],
     darkMode: false, // or 'media' or 'class'
     theme: {
-        extend: {},
+        screens: {
+            sm: '544px',
+            md: '768px',
+            lg: '1012px',
+            xl: '1280px',
+            '2xl': '1536px',
+        },
+        extend: {
+            colors: { primary: colors.storm, secondary: colors.orange },
+        },
     },
     variants: {
         extend: {},
